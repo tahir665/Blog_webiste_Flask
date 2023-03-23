@@ -1,0 +1,29 @@
+{
+  "params":
+
+  {
+    "local_server": "True",
+    "local_uri":"mysql://root:@localhost/mydatabase",
+    "prod_uri":"mysql://root:@localhost/mydatabase",
+    "fb_url":"https://facebook.com",
+    "tw_url":"https://twitter.com/",
+    "gh_url":"https://github.com/",
+    "blog_name":"Python & Flask",
+    "tag_line": "Learn Flask",
+    "gmail_user":"your_gmail_id",
+    "gmail_pass":"password",
+    "about_text":"this is my website and you can learn alot from this website",
+    "no_of_posts":5,
+    "admin_user":"admin",
+    "admin_password":"admin"
+  
+
+
+
+
+
+  }
+
+
+
+}

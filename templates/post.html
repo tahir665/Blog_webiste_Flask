@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header -->
+    
+    <header class="masthead" style="background-image: url('../static/img/{{post.img}}')">
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>{{post.title}}</h1>
+              <span class="subheading">This is what I do.</span>
+              <p class="post-meta">
+                Posted by
+                <a href="#!">Admin</a>
+                on {{post.date}}
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+         <p> {{post.content}}</p>
+        </div>
+      </div>
+    </div>
+
+   {% endblock %}

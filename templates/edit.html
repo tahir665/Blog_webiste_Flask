@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('../static/img/home-bg.jpg')">
+        <div class="container position-relative">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="site-heading">
+                        <h1>ADMIN PANEL</h1>
+                        <span class="subheading">Manage your post</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content-->
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <!-- Post preview-->
+
+
+                <hr><a href="/login"> <button type="button" class="btn btn-primary">Dashboard Home</button></a>
+                <a href="/logout"> <button type="button" class="btn btn-primary">Logout</button></a><hr>
+                <h2>ADD/Edit Post here</h2>
+                
+
+
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="/edit/{{sno}}" method='POST'>
+                    <div class="form-floating">
+                        <input class="form-control" name="title"id="name" type="text" placeholder="Enter title" data-sb-validations="required" value="{{post.title}}" />
+                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        <label for="title">Title</label>
+                    </div>
+                    <div class="form-floating">
+                        <input class="form-control" value="{{post.slug}}" name="slug" id="slug" type="text" placeholder="Enter slug" data-sb-validations="required,email" />
+                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        <label for="slug">Slug</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" name="content"id="content" placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required">{{post.content}}</textarea>
+                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        <label for="content">Content</label>
+                    </div>
+                    <div class="form-floating">
+                        <input class="form-control" value="{{post.img}}" name="img_file"id="img_file" type="text" placeholder="Enter content" data-sb-validations="required" />
+                        <label for="img_file">Image file</label>
+                    </div>
+                    <br />
+                    <button class="btn btn-primary text-uppercase " id="submitButton" type="submit">Done</button>
+                </form> 
+
+
+
+
+                <!-- Divider-->
+                <hr class="my-4" />
+
+            </div>
+        </div>
+    </div>    
+    
+    {% endblock %}
